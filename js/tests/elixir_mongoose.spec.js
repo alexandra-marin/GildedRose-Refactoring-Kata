@@ -1,5 +1,5 @@
-import Shop from '../src/shop';
-import Item from '../src/item';
+import Shop from '../src/Shop';
+import Item from '../src/Item';
 
 describe('Elixir of the Mongoose', () => {
     it('decreases in quality by 1', () => {

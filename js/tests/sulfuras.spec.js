@@ -1,5 +1,5 @@
-import Shop from '../src/shop';
-import Item from '../src/item';
+import Shop from '../src/Shop';
+import Item from '../src/Item';
 
 describe('Sulfuras, Hand of Ragnaros', () => {
     it('does not decrease in quality by 1', () => {

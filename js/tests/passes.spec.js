@@ -1,5 +1,5 @@
-import Shop from '../src/shop';
-import Item from '../src/item';
+import Shop from '../src/Shop';
+import Item from '../src/Item';
 
 describe('Backstage passes', () => {
     it('Backstage passes with sellIn 0 have quality reduced to 0', () => {
