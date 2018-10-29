@@ -53,6 +53,31 @@ class Sulfuras {
     updateQuality = () => { }
 }
 
+class SimpleItem {
+    constructor(item) {
+        this.item = item;
+    }
+
+    updateQuality = () => {
+        if (this.item.quality > 0) {
+            this.item.quality = this.item.quality - 1;
+        }
+        this.item.sellIn = this.item.sellIn - 1;
+        if (this.item.sellIn < 0 && this.item.quality > 0) {
+            this.item.quality = this.item.quality - 1;
+        }
+    }
+}
+
+
+const qualityUpdater = (item) => {
+    switch (item.name) {
+    case 'Aged Brie': return new AgedBrie(item);
+    case 'Backstage passes to a TAFKAL80ETC concert': return new BackstagePass(item);
+    case 'Sulfuras, Hand of Ragnaros': return new Sulfuras(item);
+    default: return new SimpleItem(item);
+    }
+};
 
 export default class Shop {
     constructor(items = []) {
@@ -60,24 +85,7 @@ export default class Shop {
     }
 
     updateQuality = () => {
-        for (let i = 0; i < this.items.length; i += 1) {
-            if (this.items[i].name === 'Aged Brie') {
-                new AgedBrie(this.items[i]).updateQuality();
-                continue;
-            }
-
-            if (this.items[i].name === 'Backstage passes to a TAFKAL80ETC concert') {
-                new BackstagePass(this.items[i]).updateQuality();
-                continue;
-            }
-
-            if (this.items[i].name === 'Sulfuras, Hand of Ragnaros') {
-                new Sulfuras(this.items[i]).updateQuality();
-                continue;
-            }
-
-            this.items[i].updateQuality();
-        }
+        this.items.map(qualityUpdater).forEach(x => x.updateQuality());
 
         return this.items;
     }
