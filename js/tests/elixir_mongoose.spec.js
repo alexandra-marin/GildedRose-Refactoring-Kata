@@ -1,4 +1,5 @@
-import { Shop, Item } from '../src/gilded_rose';
+import Shop from '../src/shop';
+import Item from '../src/item';
 
 describe('Elixir of the Mongoose', () => {
     it('decreases in quality by 1', () => {

@@ -1,4 +1,5 @@
-import { Shop, Item } from '../src/gilded_rose';
+import Shop from '../src/shop';
+import Item from '../src/item';
 
 describe('Aged Brie', () => {
     it('with quality below 50 increases by 1', () => {

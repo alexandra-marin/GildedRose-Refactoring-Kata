@@ -1,4 +1,5 @@
-import { Shop, Item } from '../src/gilded_rose';
+import Shop from '../src/shop';
+import Item from '../src/item';
 
 describe('Backstage passes', () => {
     it('Backstage passes with sellIn 0 have quality reduced to 0', () => {
