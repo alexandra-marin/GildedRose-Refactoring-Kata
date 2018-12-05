@@ -1,5 +1,6 @@
 import Shop from '../src/Shop';
 import Item from '../src/Item';
+import ConjuredItem from '../src/ConjuredItem';
 
 describe('Elixir of the Mongoose', () => {
     it('decreases in quality by 1', () => {
@@ -9,7 +10,7 @@ describe('Elixir of the Mongoose', () => {
     });
 
     it('conjured decreases in quality by 2', () => {
-        const gildedRose = new Shop([new Item('Elixir of the Mongoose', 5, 9, true)]);
+        const gildedRose = new Shop([new ConjuredItem('Elixir of the Mongoose', 5, 9)]);
         const items = gildedRose.updateQuality();
         expect(items[0].quality).toEqual(7);
     });
@@ -27,7 +28,7 @@ describe('Elixir of the Mongoose', () => {
     });
 
     it('conjured with sellIn 0 has quality reduced by 4', () => {
-        const gildedRose = new Shop([new Item('Elixir of the Mongoose', 0, 30, true)]);
+        const gildedRose = new Shop([new ConjuredItem('Elixir of the Mongoose', 0, 30)]);
         const items = gildedRose.updateQuality();
         expect(items[0].quality).toEqual(26);
     });
