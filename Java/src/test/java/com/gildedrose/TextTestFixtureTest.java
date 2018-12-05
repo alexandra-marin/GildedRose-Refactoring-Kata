@@ -30,6 +30,7 @@ public class TextTestFixtureTest {
                 "Backstage passes to a TAFKAL80ETC concert, 5, 40\n" +
                 "Backstage passes to a TAFKAL80ETC concert, -1, 40\n" +
                 "Conjured Mana Cake, 3, 6\n" +
+                "Conjured Mana Cake, 3, 1\n" +
                 "\n" +
                 "-------- day 1 --------\n" +
                 "name, sellIn, quality\n" +
@@ -46,7 +47,8 @@ public class TextTestFixtureTest {
                 "Backstage passes to a TAFKAL80ETC concert, 4, 50\n" +
                 "Backstage passes to a TAFKAL80ETC concert, 4, 43\n" +
                 "Backstage passes to a TAFKAL80ETC concert, -2, 0\n" +
-                "Conjured Mana Cake, 2, 5\n" +
+                "Conjured Mana Cake, 2, 4\n" +
+                "Conjured Mana Cake, 2, 0\n" +
                 "\n");
     }
 }
