@@ -1,4 +1,4 @@
-export default class SimpleItem {
+export default class DefaultUpdater {
     constructor(item) {
         this.item = item;
     }

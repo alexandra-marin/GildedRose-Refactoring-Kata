@@ -1,4 +1,4 @@
-export default class Sulfuras {
+export default class SulfurasUpdater {
     constructor(item) {
         this.item = item;
     }

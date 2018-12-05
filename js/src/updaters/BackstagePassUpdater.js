@@ -1,4 +1,4 @@
-export default class BackstagePass {
+export default class BackstagePassUpdater {
     constructor(item) {
         this.item = item;
     }

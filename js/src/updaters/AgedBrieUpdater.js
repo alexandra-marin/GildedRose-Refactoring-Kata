@@ -1,4 +1,4 @@
-export default class AgedBrie {
+export default class AgedBrieUpdater {
     constructor(item) {
         this.item = item;
     }
